@@ -6,8 +6,6 @@ const { LoadRouter } = require("./routes/Load_details.route");
 const { PostRouter } = require("./routes/post_details.route");
 const { FilterRouter } = require("./routes/Filter.route");
 
-const port=9001;
-
 
 const app=express();
 
@@ -34,7 +32,7 @@ app.get("/",(req,res)=>{
 
 
 // Listening to API
-app.listen(9001,async()=>{
+app.listen(8080,async(req,res)=>{
     try {
         await connection;
         console.log("Connected to DB successfully")
@@ -42,5 +40,5 @@ app.listen(9001,async()=>{
         console.log(error);
         console.log("Failed to Connect");
     }
-    console.log(`listening on port ${port}`)
+    console.log('listening on port 8080')
 })
