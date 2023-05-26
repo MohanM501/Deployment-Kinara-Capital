@@ -23,7 +23,7 @@ app.get("/",(req,res)=>{
 // Routers
 
 app.use("/load",LoadRouter);
-app.use("/filter",FilterRouter)
+// app.use("/filter",FilterRouter)
 
 // This is extraa; to add student details from frontend;f
 app.use("/post",PostRouter);
