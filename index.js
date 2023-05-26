@@ -22,13 +22,13 @@ app.get("/",(req,res)=>{
     res.send("Welcome to Backend")
 })
 
-// Routers
+//Routers
 
-// app.use("/load",LoadRouter);
-// app.use("/filter",FilterRouter)
+app.use("/load",LoadRouter);
+app.use("/filter",FilterRouter)
 
-// This is extraa; to add student details from frontend;f
-// app.use("/post",PostRouter);
+//This is extraa; to add student details from frontend;f
+app.use("/post",PostRouter);
 
 
 // Listening to API
