@@ -5,7 +5,7 @@ const { LoadRouter } = require("./routes/Load_details.route");
 const { PostRouter } = require("./routes/post_details.route");
 const { FilterRouter } = require("./routes/filter.route");
 require('dotenv').config();
-const port=process.env.Port||9001;
+const port=9001;
 
 const app=express();
 
