@@ -9,7 +9,7 @@ PostRouter.post("/",async(req,res)=>{
 
         const new_student=new StudentModel(data);
         await new_student.save();
-        res.status(201).json({"msg":"Student details added succesfully"})
+        res.status(201).send({"msg":"Student details added succesfully"})
 
     } catch (error) {
         console.log(error,"err");
