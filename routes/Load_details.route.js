@@ -7,7 +7,7 @@ LoadRouter.get("/",async(req,res)=>{
     res.send("Hi welcome to load");
 })
 
-LoadRouter.get("/:page_no/:page_size",async(req,res)=>{
+LoadRouter.get("/loaded/:page_no/:page_size",async(req,res)=>{
 
     // Taking the page no & page_size as params and if typeError occurs means it will take default values of 1 and 5;
 

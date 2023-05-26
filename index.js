@@ -1,5 +1,6 @@
 const express=require("express");
 const cors=require("cors");
+
 const { connection } = require("./configue/db");
 const { LoadRouter } = require("./routes/Load_details.route");
 const { PostRouter } = require("./routes/post_details.route");
@@ -7,14 +8,17 @@ const { FilterRouter } = require("./routes/Filter.route");
 
 const port=9001;
 
+
 const app=express();
+
+app.use(express.json())// Middleware to parse incoming json data 
 
 // Cors allows access for all the sites to access the this server;
 app.use(cors({
     origin:"*"
 }))
 
-app.use(express.json())// Middleware to parse incoming json data 
+
 
 app.get("/",(req,res)=>{
     res.send("Welcome to Backend")
