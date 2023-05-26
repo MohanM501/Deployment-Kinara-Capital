@@ -22,15 +22,15 @@ app.get("/",(req,res)=>{
 
 // Routers
 
-app.use("/load",LoadRouter);
+// app.use("/load",LoadRouter);
 // app.use("/filter",FilterRouter)
 
 // This is extraa; to add student details from frontend;f
-app.use("/post",PostRouter);
+// app.use("/post",PostRouter);
 
 
 // Listening to API
-app.listen(port,async()=>{
+app.listen(9001,async()=>{
     try {
         await connection;
         console.log("Connected to DB successfully")
